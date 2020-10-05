@@ -4,10 +4,15 @@ nav {
   background-color: #4056a1;
   color: #ffffff;
   display: flex;
+  justify-content: space-between;
 }
 
-nav > span {
+#logo {
   text-transform: uppercase;
   font-family: "Bungee", cursive;
+  margin: 1.5em;
+}
+
+#new {
   margin: 1.5em;
 }
