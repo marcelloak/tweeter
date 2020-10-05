@@ -7,12 +7,11 @@ nav {
   justify-content: space-between;
 }
 
-#logo {
-  text-transform: uppercase;
-  font-family: "Bungee", cursive;
+span {
   margin: 1.5em;
 }
 
-#new {
-  margin: 1.5em;
+#logo {
+  text-transform: uppercase;
+  font-family: "Bungee", cursive;
 }
