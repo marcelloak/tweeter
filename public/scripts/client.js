@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+ const escape = function(text) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
+ }
+
 const createTweetElement = function(tweet) {
   return $(`
   <article class="tweet">
@@ -16,7 +22,7 @@ const createTweetElement = function(tweet) {
         <div id="tag">${tweet.user.handle}</div>
       </div>
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
       <div>
         <div>${Math.ceil((new Date() - new Date(tweet.created_at)) / (1000 * 60 * 60 * 24))} days ago</div>
