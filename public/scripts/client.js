@@ -60,8 +60,8 @@ $(document).ready(function() {
     const tweet = $('#new-tweet-form').serialize();
     const contents = decodeURI(tweet.slice(5));
     let error = "";
-    if (contents === "") error = 'Error: Tweet has no content';
-    else if (contents.length > 140) error = 'Error: Tweet is too long';
+    if (contents === "") error = '⚠️ Tweet is too short ⚠️';
+    else if (contents.length > 140) error = '⚠️ Tweet is too long ⚠️';
     $('#error').slideUp(500, function() {
       $('#error').empty();
       if (error) {

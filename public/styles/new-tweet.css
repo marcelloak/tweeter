@@ -28,6 +28,12 @@
 }
 
 #error {
-  color: red;
+  color: rgb(255, 51, 0);
   display: none;
+  border: red 3px solid;
+  margin-top: 10px;
+}
+
+#error p {
+  margin-left: 35%;
 }
