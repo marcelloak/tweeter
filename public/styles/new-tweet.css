@@ -26,3 +26,8 @@
   border-bottom: rgb(83, 83, 83) 5px solid;
   background-color: #f4f1ec;
 }
+
+#error {
+  color: red;
+  display: none;
+}

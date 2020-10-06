@@ -59,12 +59,20 @@ $(document).ready(function() {
     event.preventDefault();
     const tweet = $('#new-tweet-form').serialize();
     const contents = decodeURI(tweet.slice(5));
-    if (contents === "") alert('Tweet has no content');
-    else if (contents.length > 140) alert('Tweet is too long');
-    else {
-      $("#new-tweet-form")[0].reset();
-      $.post('/tweets/', tweet)
-      .then(function() {loadTweets();});
-    }
+    let error = "";
+    if (contents === "") error = 'Error: Tweet has no content';
+    else if (contents.length > 140) error = 'Error: Tweet is too long';
+    $('#error').slideUp(500, function() {
+      $('#error').empty();
+      if (error) {
+        $('#error').append(`<p>${error}</p>`);
+        $('#error').slideDown(500);
+      }
+      else {
+        $("#new-tweet-form")[0].reset();
+        $.post('/tweets/', tweet)
+        .then(() => loadTweets());
+      }
+    });
   });
 });
