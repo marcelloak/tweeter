@@ -17,3 +17,15 @@ span {
   text-transform: uppercase;
   font-family: "Bungee", cursive;
 }
+
+nav > button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  margin-right: 20px;
+  outline: none;
+}
+
+nav > button:hover {
+  color: black;
+}

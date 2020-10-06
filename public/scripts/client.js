@@ -71,8 +71,19 @@ $(document).ready(function() {
       else {
         $("#new-tweet-form")[0].reset();
         $.post('/tweets/', tweet)
-        .then(() => loadTweets());
+        .then(() => {
+          loadTweets();
+          $(".new-tweet").slideUp(500);
+        });
       }
     });
+  });
+
+  $("#write-tweet").click(function() {
+    if ($(".new-tweet").is(':visible')) $(".new-tweet").slideUp(500);
+    else {
+      $(".new-tweet").slideDown(500);
+      $("#tweet-text").focus();
+    }
   });
 });
