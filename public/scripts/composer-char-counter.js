@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $("#tweet-text").on("keyup", function() {
+  $("#tweet-text").on("keyup", function(event) {
+    if (event.keyCode === 13) document.getElementById("submit").click();
     left = 140 - $(this).val().length;
     counter = $(this).parent().find('.counter');
     counter.val(left);
