@@ -52,8 +52,13 @@ $(document).ready(function() {
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
     const tweet = $('#new-tweet-form').serialize();
-    $("#new-tweet-form")[0].reset();
-    $.post('/tweets/', tweet)
-    .then(function() {loadTweets();});
+    const contents = decodeURI(tweet.slice(5));
+    if (contents === "") alert('Tweet has no content');
+    else if (contents.length > 140) alert('Tweet is too long');
+    else {
+      $("#new-tweet-form")[0].reset();
+      $.post('/tweets/', tweet)
+      .then(function() {loadTweets();});
+    }
   });
 });
