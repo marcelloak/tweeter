@@ -65,3 +65,11 @@ const data = [
 ]
 
 renderTweets(data);
+
+
+$(document).ready(function() {
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    $.post('/tweets/', $('#new-tweet-form').serialize());
+  });
+});
