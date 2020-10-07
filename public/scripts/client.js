@@ -79,9 +79,30 @@ $(document).ready(function() {
     });
   });
 
+  window.onscroll = function() {
+    const pageOffset = document.documentElement.scrollTop || document.body.scrollTop;
+    if (pageOffset > 100) {
+      $("#top").show();
+      $("#write-tweet").hide();
+    }
+    else {
+      $("#top").hide();
+      $("#write-tweet").show();
+    }
+  };
+
   $("#write-tweet").click(function() {
     if ($(".new-tweet").is(':visible')) $(".new-tweet").slideUp(500);
     else {
+      $(".new-tweet").slideDown(500);
+      $("#tweet-text").focus();
+    }
+  });
+
+  $("#top").click(function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    if (!$(".new-tweet").is(':visible')) {
       $(".new-tweet").slideDown(500);
       $("#tweet-text").focus();
     }

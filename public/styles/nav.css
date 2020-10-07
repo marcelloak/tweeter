@@ -1,7 +1,7 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -27,5 +27,25 @@ nav > button {
 }
 
 nav > button:hover {
+  color: black;
+}
+
+footer > button {
+  background: red;
+  display: none;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 60px;
+  padding-bottom: 15px;
+  outline: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 100px;
+  width: 100px;
+}
+
+footer > button:hover {
   color: black;
 }
