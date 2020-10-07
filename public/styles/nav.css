@@ -23,7 +23,7 @@ nav button {
   outline: none;
 }
 nav button:hover {
-  color: black;
+  color: #545149;
 }
 
 @media only screen and (min-width: 1024px) {

@@ -15,7 +15,6 @@ html {
 /*
  * Global layout
  */
-
 body {
   color: variables.$textcolor;
   background-color: variables.$bgcolor;
@@ -30,10 +29,6 @@ main {
   width: 90%;
   margin: 20px;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
  @media only screen and (min-width: 1024px) {
    body {
