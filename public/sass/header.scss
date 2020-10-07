@@ -1,0 +1,23 @@
+@use 'variables';
+
+body > header {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: variables.$textcolorspecial;
+  background-color: variables.$bgcolorspecial;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  padding-top: 120px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body > header {
+    padding-top: 40px;
+    width: 50%;
+    height: 440px;
+    margin: 0px 40px;
+  }
+}

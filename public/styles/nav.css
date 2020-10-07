@@ -1,57 +1,33 @@
 nav {
   height: 120px;
   width: 100%;
-  color: #ffffff;
+  color: white;
   display: flex;
   justify-content: space-between;
   position: fixed;
   top: 0;
 }
-
-span {
+nav span {
   margin: 1.5em;
   margin-top: 2em;
 }
-
-#logo {
+nav #logo {
   text-transform: uppercase;
   font-family: "Bungee", cursive;
 }
-
-nav > button {
+nav button {
   background: none;
   border: none;
-  color: #ffffff;
+  color: white;
   margin-right: 20px;
   outline: none;
 }
-
-nav > button:hover {
-  color: black;
-}
-
-footer > button {
-  background: red;
-  display: none;
-  border-radius: 50%;
-  border: none;
-  color: white;
-  font-size: 60px;
-  padding-bottom: 15px;
-  outline: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  height: 100px;
-  width: 100px;
-}
-
-footer > button:hover {
+nav button:hover {
   color: black;
 }
 
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: rgb(40, 40, 151);
+    background-color: #282897;
   }
 }

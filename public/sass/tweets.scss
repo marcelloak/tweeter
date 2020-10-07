@@ -1,7 +1,9 @@
+@use 'variables';
+
 .tweet {
   display: flex;
   flex-direction: column;
-  border: #535353 5px solid;
+  border: variables.$border;
   margin-bottom: 20px;
 }
 
@@ -22,7 +24,7 @@
 
 .tweet p {
   height: 60px;
-  border-bottom: #535353 5px solid;
+  border-bottom: variables.$border;
   margin: 20px;
   padding-left: 20px;
 }
@@ -36,7 +38,7 @@
 }
 
 .tweet:hover {
-  box-shadow: lightblue 5px 5px;
+  box-shadow: variables.$shadowhover;
   font-weight: bold;
 }
 

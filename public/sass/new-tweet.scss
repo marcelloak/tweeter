@@ -1,3 +1,5 @@
+@use 'variables';
+
 .new-tweet {
   display: none;
   margin-bottom: 1.5em;
@@ -13,8 +15,8 @@
 
 .new-tweet button {
   border: none;
-  background-color: #282897;
-  color: white;
+  background-color: variables.$bgcolornav;
+  color: variables.$textcolorspecial;
 }
 
 .new-tweet textarea {
@@ -22,13 +24,13 @@
   border: none;
   resize: none;
   outline: none;
-  border-bottom: #535353 5px solid;
-  background-color: #f4f1ec;
+  border-bottom: variables.$border;
+  background-color: variables.$bgcolor;
 }
 
 #error {
-  color: #ff3300;
-  border: red 3px solid;
+  color: variables.$textcolorerror;
+  border: variables.$bordererror;
   display: none;
   margin-top: 10px;
 }

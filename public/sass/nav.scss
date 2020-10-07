@@ -1,0 +1,39 @@
+@use 'variables';
+
+nav {
+  height: 120px;
+  width: 100%;
+  color: variables.$textcolorspecial;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+
+  span {
+    margin: 1.5em;
+    margin-top: 2em;
+  }
+  
+  #logo {
+    text-transform: uppercase;
+    font-family: variables.$fontfamilylogo;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: variables.$textcolorspecial;
+    margin-right: 20px;
+    outline: none;
+  }
+  
+  button:hover {
+    color: variables.$textcolorhover;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: variables.$bgcolornav;
+  }
+}
