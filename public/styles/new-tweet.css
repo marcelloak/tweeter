@@ -1,6 +1,6 @@
 .new-tweet {
   display: none;
-  margin: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .new-tweet div {
@@ -13,7 +13,7 @@
 
 .new-tweet button {
   border: none;
-  background-color: rgb(40, 40, 151);
+  background-color: #282897;
   color: #ffffff;
 }
 
@@ -22,12 +22,12 @@
   border: none;
   resize: none;
   outline: none;
-  border-bottom: rgb(83, 83, 83) 5px solid;
+  border-bottom: #535353 5px solid;
   background-color: #f4f1ec;
 }
 
 #error {
-  color: rgb(255, 51, 0);
+  color: #ff3300;
   display: none;
   border: red 3px solid;
   margin-top: 10px;

@@ -15,7 +15,7 @@ const createTweetElement = function(tweet) {
   <article class="tweet">
     <header>
       <div>
-        <div>${tweet.user.avatars}</div>
+        <div><img src='${tweet.user.avatars}'/></div>
         <div>${tweet.user.name}</div>
       </div>
       <div>
@@ -46,7 +46,7 @@ const renderTweets = function(tweets) {
 }
 
 const loadTweets = function() {
-  $.ajax('/tweets/', { method: 'GET' })
+  $.ajax('/tweets/')
     .then(function(tweets) {
       renderTweets(tweets);
     });
@@ -102,9 +102,7 @@ $(document).ready(function() {
   $("#top").click(function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    if (!$(".new-tweet").is(':visible')) {
-      $(".new-tweet").slideDown(500);
-      $("#tweet-text").focus();
-    }
+    if (!$(".new-tweet").is(':visible')) $(".new-tweet").slideDown(500);
+    $("#tweet-text").focus();
   });
 });

@@ -1,14 +1,13 @@
 .tweet {
   display: flex;
   flex-direction: column;
-  border: rgb(83, 83, 83) 5px solid;
+  border: #535353 5px solid;
   margin-bottom: 20px;
 }
 
 .tweet header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 10px;
 }
 
@@ -22,11 +21,10 @@
 }
 
 .tweet p {
-  height: 50px;
-  border-bottom: rgb(83, 83, 83) 5px solid;
+  height: 60px;
+  border-bottom: #535353 5px solid;
   margin: 20px;
   padding-left: 20px;
-  margin-bottom: 0px;
 }
 
 .tweet footer {
@@ -44,4 +42,11 @@
 
 .tweet:hover #tag {
   display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweets {
+    width: 50%;
+    margin-top: 120px;
+  }
 }

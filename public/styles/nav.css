@@ -1,7 +1,6 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -11,6 +10,7 @@ nav {
 
 span {
   margin: 1.5em;
+  margin-top: 2em;
 }
 
 #logo {
@@ -48,4 +48,10 @@ footer > button {
 
 footer > button:hover {
   color: black;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: rgb(40, 40, 151);
+  }
 }
