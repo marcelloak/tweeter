@@ -9,10 +9,10 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["Screenshot of phone version"](https://github.com/marcelloak/tinyapp/blob/master/docs/phone-version.png)
-!["Screenshot of desktop version"](https://github.com/marcelloak/tinyapp/blob/master/docs/desktop-version.png)
-!["Screenshot with compose tweet box open"](https://github.com/marcelloak/tinyapp/blob/master/docs/compose-tweet.png)
-!["Screenshot scrolled down"](https://github.com/marcelloak/tinyapp/blob/master/docs/scrolled-down.png)
+!["Screenshot of phone version"](https://github.com/marcelloak/tweeter/blob/master/docs/phone-version.png)
+!["Screenshot of desktop version"](https://github.com/marcelloak/tweeter/blob/master/docs/desktop-version.png)
+!["Screenshot with compose tweet box open"](https://github.com/marcelloak/tweeter/blob/master/docs/compose-tweet.png)
+!["Screenshot scrolled down"](https://github.com/marcelloak/tweeter/blob/master/docs/scrolled-down.png)
 
 ## Dependencies
 
