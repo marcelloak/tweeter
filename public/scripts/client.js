@@ -58,6 +58,21 @@ const loadTweets = function() {
     });
 };
 
+//Manages error within new tweet form
+const errorManager = function(contents) {
+  let error = "";
+  if (contents === "") error = '⚠️ Tweet is too short ⚠️';
+  else if (contents.length > 140) error = '⚠️ Tweet is too long ⚠️';
+  $('#error').slideUp(500, function() {
+    $('#error').empty();
+    if (error) {
+      $('#error').append(`<p>${error}</p>`);
+      $('#error').slideDown(500);
+    }
+  });
+  return error;
+}
+
 //Main client logic
 $(document).ready(function() {
   loadTweets();
@@ -67,20 +82,11 @@ $(document).ready(function() {
     event.preventDefault();
     const tweet = $('#new-tweet-form').serialize();
     const contents = decodeURI(tweet.slice(5));
-    let error = "";
-    if (contents === "") error = '⚠️ Tweet is too short ⚠️';
-    else if (contents.length > 140) error = '⚠️ Tweet is too long ⚠️';
-    $('#error').slideUp(500, function() {
-      $('#error').empty();
-      if (error) {
-        $('#error').append(`<p>${error}</p>`);
-        $('#error').slideDown(500);
-      } else {
-        $("#new-tweet-form")[0].reset();
-        $.post('/tweets/', tweet)
-          .then(() => loadTweets());
-      }
-    });
+    if(!errorManager(contents)) {
+      $("#new-tweet-form")[0].reset();
+      $.post('/tweets/', tweet)
+        .then(() => loadTweets());
+    }
   });
 
   //When window is scrolled, deal with top bottom
