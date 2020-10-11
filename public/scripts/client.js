@@ -78,10 +78,7 @@ $(document).ready(function() {
       } else {
         $("#new-tweet-form")[0].reset();
         $.post('/tweets/', tweet)
-          .then(() => {
-            loadTweets();
-            $(".new-tweet").slideUp(500);
-          });
+          .then(() => loadTweets());
       }
     });
   });
